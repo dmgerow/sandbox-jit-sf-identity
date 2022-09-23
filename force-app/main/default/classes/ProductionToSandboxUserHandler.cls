@@ -1,4 +1,5 @@
 global class ProductionToSandboxUserHandler implements Auth.SamlJitHandler {
+    @TestVisible
     private static final String EXTERNAL_USER_MESSAGE = 'This handler cannot be used with external users.';
     private static final String PROFILE_KEY_PREFIX = '00e';
     private static final Set<String> INSERT_ONLY_FIELDS = new Set<String>{
