@@ -1,18 +1,14 @@
-# Salesforce DX Project: Next Steps
+# JIT Provisioning in Sandboxes with Salesforce Identity
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This repository contains an Apex handler for JIT provisioning that makes it easy to use Salesforce Identity to create users in your sandbox JIT. The functionality that this provides over standard JIT provisioning is:
 
-## How Do You Plan to Deploy Your Changes?
+- Only set some attributes on create. This means that you can change the profile of users in your sandboxes without having them reverted every time that they log in. Be default this behavior applies to
+  - Username
+  - ProfileId
+  - Roleid
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+To add attributes to this handler, use the same syntax that you would for native provisioning. See [this](https://help.salesforce.com/s/articleView?id=sf.sso_jit_requirements.htm&type=5) document for details. For clarity, in order to set a user field, the syntax is `User.Username`.
 
-## Configure Your Salesforce DX Project
+Make sure that your custom attributes have a value for every required field. See [this](https://help.salesforce.com/s/articleView?id=000327115&type=1) article for details.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+**Note that this only works for internal users.**
