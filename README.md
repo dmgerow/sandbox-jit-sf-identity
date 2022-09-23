@@ -12,3 +12,8 @@ To add attributes to this handler, use the same syntax that you would for native
 Make sure that your custom attributes have a value for every required field. See [this](https://help.salesforce.com/s/articleView?id=000327115&type=1) article for details.
 
 **Note that this only works for internal users.**
+
+Installation URLs:
+
+- [Production](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t8b000001RvnhAAC)
+- [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t8b000001RvnhAAC)

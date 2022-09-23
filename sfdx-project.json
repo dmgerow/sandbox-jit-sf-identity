@@ -1,12 +1,19 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "Sandbox JIT Provisioning for SF Identity",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        }
+    ],
+    "name": "sf-identity-jit-sandbox-provisioning",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "55.0",
+    "packageAliases": {
+        "Sandbox JIT Provisioning for SF Identity": "0Ho8b000000sXuoCAE",
+        "Sandbox JIT Provisioning for SF Identity@0.1.0-1": "04t8b000001RvnhAAC"
     }
-  ],
-  "name": "sf-identity-jit-sandbox-provisioning",
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "55.0"
 }
