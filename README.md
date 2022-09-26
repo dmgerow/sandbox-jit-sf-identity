@@ -9,6 +9,21 @@ This repository contains an Apex handler for JIT provisioning that makes it easy
 
 To add attributes to this handler, use the same syntax that you would for native provisioning. See [this](https://help.salesforce.com/s/articleView?id=sf.sso_jit_requirements.htm&type=5) document for details. For clarity, in order to set a user field, the syntax is `User.Username`.
 
+Example below:
+
+| Attribute Key          | Attribute Value       |
+| ---------------------- | --------------------- |
+| User.Email             | $User.Email           |
+| User.LastName          | $User.LastName        |
+| User.ProfileId         | $Profile.Name         |
+| User.LanguageLocaleKey | "en_US"               |
+| User.Alias             | $User.Alias           |
+| User.TimeZoneSidKey    | "America/Los_Angeles" |
+| User.EmailEncodingKey  | "UTF-8"               |
+| User.FirstName         | $User.FirstName       |
+| User.LocaleSidKey      | "en_US"               |
+| User.Username          | $User.Username        |
+
 Make sure that your custom attributes have a value for every required field. See [this](https://help.salesforce.com/s/articleView?id=000327115&type=1) article for details.
 
 **Note that this only works for internal users.**
